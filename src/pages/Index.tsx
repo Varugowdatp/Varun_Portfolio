@@ -1,13 +1,40 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from "react";
+import Navbar from "@/components/portfolio/Navbar";
+import Hero from "@/components/portfolio/Hero";
+import EngineeringProfile from "@/components/portfolio/EngineeringProfile";
+import TechStack from "@/components/portfolio/TechStack";
+import Projects from "@/components/portfolio/Projects";
+import Experience from "@/components/portfolio/Experience";
+import Leadership from "@/components/portfolio/Leadership";
+import Contact from "@/components/portfolio/Contact";
+import Footer from "@/components/portfolio/Footer";
 
 const Index = () => {
+  // Apply dark class on mount (default theme)
+  useEffect(() => {
+    const stored = localStorage.getItem("portfolio-theme");
+    if (!stored || stored === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <>
+      {/* SEO meta handled via index.html */}
+      <Navbar />
+      <main>
+        <Hero />
+        <EngineeringProfile />
+        <TechStack />
+        <Projects />
+        <Experience />
+        <Leadership />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
 };
 
