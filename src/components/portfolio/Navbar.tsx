@@ -25,13 +25,12 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "border-b border-border bg-background/90 backdrop-blur-md"
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+        ? "border-b border-border bg-background/90 backdrop-blur-md"
+        : "bg-transparent"
+        }`}
     >
-      <div className="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 h-14 flex items-center justify-between">
         {/* Logo / Name */}
         <a
           href="#hero"
@@ -46,7 +45,7 @@ export default function Navbar() {
             <a
               key={l.href}
               href={l.href}
-              className="text-xs font-medium tracking-wide text-muted-foreground hover:text-foreground transition-colors duration-200"
+              className="nav-link-animated text-xs font-medium tracking-wide text-muted-foreground hover:text-foreground transition-colors duration-200"
             >
               {l.label}
             </a>

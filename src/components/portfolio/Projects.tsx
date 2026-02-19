@@ -133,7 +133,7 @@ export default function Projects() {
           Production systems built with a focus on architecture, performance, and real-world impact.
         </p>
 
-        <div className="grid sm:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {PROJECTS.map((p) => (
             <article key={p.id} className="card-base group flex flex-col gap-4">
               {/* Header */}
