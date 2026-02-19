@@ -4,6 +4,9 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  // IMPORTANT: Set to your repo name so GitHub Pages serves assets correctly.
+  // e.g. https://Varugowdatp.github.io/Varun_Portfolio/
+  base: "/Varun_Portfolio/",
   server: {
     host: "::",
     port: 8080,
